@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<title>Submission Page</title>
+<body>
+    <h4>{{n['filename']}} successfully uploaded</h4>
+    
+    <h3>{{n['search_query']}} was found in the following frames:</h3>
+    
+        {% for i in n['query_results'] %}
+        <img src="temp/frame0.jpg" alt="{{i['frame']}}.jpg" width="224" height="224">
+        <br>
+        <p>{{i['frame']}} (Confidence: {{i['certainity']}})</p>
+        <br>
+        {% endfor %}
+
+    
+</body>
+</html>
